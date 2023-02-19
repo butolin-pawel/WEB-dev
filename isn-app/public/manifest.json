@@ -1,7 +1,7 @@
 {
 	"short_name": "ISN",
 	"name": "ISN-app",
-	"lang": "ru",
+	"lang": "en",
 	"start_url": "/",
 	"background_color": "#00aae7",
 	"theme_color": "#00aae7",
