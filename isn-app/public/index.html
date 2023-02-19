@@ -14,7 +14,7 @@
     <script>
       if ('serviceWorker' in navigator){
         window.addEventListener('load', function(){
-          navigator.serviceWorker.register('/isn-app/dist/sw.js');
+          navigator.serviceWorker.register('/sw.js');
       });
     }
     </script>
@@ -26,3 +26,10 @@
     
   </body>
 </html>
+<!-- cmd
+cd isn-app
+npm run build
+workbox generateSW workbox-config.js
+serve -s dist 
+
+-->
