@@ -1,0 +1,15 @@
+:host {
+  overflow-y: auto;
+}
+.card{
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: aqua;
+}
+.card p {
+  text-align: center;
+  font-size: 25px;
+}
+.foto{
+  margin-left: 140px;
+}

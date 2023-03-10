@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  Card view demo
+</mat-toolbar>
+<div class="content" style="height:1000px;">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" >
+    <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%"
+         infinite-scroll
+         [infiniteScrollDistance]="2"
+         [infiniteScrollThrottle]="200"
+         (scrolled)="onScroll()"
+         *ngFor="let people of humans">
+         <div class="card">
+          <div>
+        <p>Имя: {{people.name}}</p>
+        <p>Телефон: {{people.cell}}</p>
+        <p>E-mail: <br>{{people.email}}</p>
+        <img src="{{people.picture}}" class="foto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
