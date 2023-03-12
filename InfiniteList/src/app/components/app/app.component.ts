@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {DogService} from "../../service/human-service.service";
+import {HumanService} from "../../service/human-service.service";
 import {Human} from "../../model/Human";
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,16 +13,19 @@ export class AppComponent implements OnInit{
   gridColumns = 5;
   page = 1;
   humans: Human[] = []
-
-  constructor(private dogService: DogService) {}
+  constructor(private humService: HumanService) {}
   ngOnInit(): void {
-    this.humans.push(
-    this.dogService
-      .getHumans(this.page));
+    // this.humans.push(...
+    // this.dogService
+    //   .getHumans(this.page));
+    this.humService.getHumans(this.page).subscribe((humant : Human ) => this.humans.push(humant));
   }
-  onScroll(): void {
-    this.humans.push(
-      this.dogService
-        .getHumans(this.page++));
-  }
+
+    onScroll(): void {
+    // this.humans.push(...
+    //   this.dogService
+    //     .getHumans(this.page++));
+
+    this.humService.getHumans(this.page++).subscribe((humant : Human) => this.humans.push(humant));
+}
 }
