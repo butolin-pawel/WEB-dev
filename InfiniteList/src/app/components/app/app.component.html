@@ -6,7 +6,7 @@
     <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%"
          infinite-scroll
          [infiniteScrollDistance]="2"
-         [infiniteScrollThrottle]="300"
+         [infiniteScrollThrottle]="100"
          (scrolled)="onScroll()"
          *ngFor="let people of humans">
          <div class="card">

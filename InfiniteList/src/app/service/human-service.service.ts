@@ -11,7 +11,7 @@ export class HumanService  {
   #limit: number = 150;
   responce : any;
   human:Human[] =[{
-    name : 'lucy',
+    name : 'Lucy',
         cell: '049-571-97-40',
         email : 'yddy@example.com',
         picture: 'https://randomuser.me/api/portraits/med/men/75.jpg'

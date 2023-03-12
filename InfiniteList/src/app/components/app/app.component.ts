@@ -19,13 +19,14 @@ export class AppComponent implements OnInit{
     // this.dogService
     //   .getHumans(this.page));
     this.humService.getHumans(this.page).subscribe((humant : Human[] ) => this.humans.push(...humant));
+
   }
 
     onScroll(): void {
     // this.humans.push(...
     //   this.dogService
     //     .getHumans(this.page++));
-      console.log("SCROOOOOOL")
+
     this.humService.getHumans(this.page++).subscribe((humant : Human[]) => this.humans.push(...humant));
 }
 
