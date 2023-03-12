@@ -9,18 +9,20 @@ import { tick } from '@angular/core/testing';
 })
 export class HumanService  {
   #limit: number = 150;
-
-  constructor(private http: HttpClient) { }
   responce : any;
-  human:Human
-  =
-    {
+  human:Human[] =[{
     name : 'lucy',
         cell: '049-571-97-40',
         email : 'yddy@example.com',
         picture: 'https://randomuser.me/api/portraits/med/men/75.jpg'
-  } ;
-  getHumans(page: number) : Observable< Human>{
+  } ];
+  constructor(private http: HttpClient) {
+    console.log("start");
+    console.log(this.human);
+  }
+
+  getHumans(page: number) : Observable< Human[]>{
+    for(let i = 0; i <5;i++){
     this.http.get(
       `https://randomuser.me/api/`)
       .subscribe( (response) => {
@@ -32,10 +34,10 @@ export class HumanService  {
            email : this.responce.results[0].email,
           picture: this.responce.results[0].picture.medium
         };
-      this.human = humant;
+      this.human.push( humant);
     });
+  }
 
-    // return this.human as unknown as Observable<Human>;
     return of(this.human);
 
 }

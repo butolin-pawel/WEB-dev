@@ -12,20 +12,21 @@ export class AppComponent implements OnInit{
   title = 'InfiniteList';
   gridColumns = 5;
   page = 1;
-  humans: Human[] = []
+  humans: Human[] =[ ];
   constructor(private humService: HumanService) {}
   ngOnInit(): void {
     // this.humans.push(...
     // this.dogService
     //   .getHumans(this.page));
-    this.humService.getHumans(this.page).subscribe((humant : Human ) => this.humans.push(humant));
+    this.humService.getHumans(this.page).subscribe((humant : Human[] ) => this.humans.push(...humant));
   }
 
     onScroll(): void {
     // this.humans.push(...
     //   this.dogService
     //     .getHumans(this.page++));
-
-    this.humService.getHumans(this.page++).subscribe((humant : Human) => this.humans.push(humant));
+      console.log("SCROOOOOOL")
+    this.humService.getHumans(this.page++).subscribe((humant : Human[]) => this.humans.push(...humant));
 }
+
 }
