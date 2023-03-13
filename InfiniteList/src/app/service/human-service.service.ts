@@ -12,12 +12,7 @@ export class HumanService  {
   responce : any;
   human:Human[] =[
   ];
-  //   {
-  //   name : 'Lucy',
-  //       cell: '049-571-97-40',
-  //       email : 'yddy@example.com',
-  //       picture: 'https://randomuser.me/api/portraits/med/men/75.jpg'
-  // } ];
+
   constructor(private http: HttpClient) {
   }
 
