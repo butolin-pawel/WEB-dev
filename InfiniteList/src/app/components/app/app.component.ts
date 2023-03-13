@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
     // this.humans.push(...
     // this.dogService
     //   .getHumans(this.page));
-    this.humService.getHumans(this.page).subscribe((humant : Human[] ) => this.humans.push(...humant));
+    this.humService.getHumans(this.page).subscribe((humant : Human[] ) =>this.humans = humant);
 
   }
 
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
     //   this.dogService
     //     .getHumans(this.page++));
 
-    this.humService.getHumans(this.page++).subscribe((humant : Human[]) => this.humans.push(...humant));
+    this.humService.getHumans(this.page++).subscribe((humant : Human[]) => this.humans = humant);
 }
 
 }
