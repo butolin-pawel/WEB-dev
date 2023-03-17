@@ -1,0 +1,36 @@
+.cont{
+    margin: 0 auto;
+    width: 1440px;
+    align-items: center;
+  }
+  .colorfox{
+    background-color: #FA4A0C;
+  }
+  .bgfon{
+    background-image: url(C:/WEB-dev/src/img/fontar.png);
+    height: 618px;
+  }
+  .colortfox{
+    color : #FA4A0C;
+  }
+  .invfon{
+    background: none;
+  }
+  .shir{
+    line-height: 80px;
+  }
+  .prob{
+    margin-bottom: 603px;
+  }
+  .dobgfon{
+    background-image: url(C:/WEB-dev/src/img/Rectangle47.png);
+    height: 510px;
+  }
+  .logofut{
+    max-width: 206px;
+    max-height: 78px;
+  }
+  .soc{
+    max-width: 40px;
+    max-height: 40px;
+  }
