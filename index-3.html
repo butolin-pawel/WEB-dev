@@ -10,6 +10,15 @@
     <title>Практика 3</title>
 </head>
 <body>
+  <script>window.addEventListener('load', function() {
+    var loadingMessage = document.createElement('div');
+    loadingMessage.className = 'loading-message';
+    loadingMessage.textContent = 'Загрузка страницы ...';
+    document.body.appendChild(loadingMessage);
+    setTimeout(function() {
+      loadingMessage.style.display = 'none';
+    }, 543);
+  });</script>
     <div class="container m-auto">
 
 
@@ -413,5 +422,8 @@
           </div>
           </footer>
     </div>
+    <script src="main-3.js" ></script>
+
+    
 </body>
 </html>
