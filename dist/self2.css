@@ -1,0 +1,10 @@
+.soc{
+    max-width: 30px;
+    max-height: 30px;
+    min-width: 25px;
+    min-height: 25px;
+}
+.univ{
+    letter-spacing: 2.1px;
+text-transform: uppercase;
+}
