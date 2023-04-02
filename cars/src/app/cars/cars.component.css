@@ -1,0 +1,12 @@
+.list{
+  margin: 0 auto;
+  text-align: center;
+}
+.pos {
+  display: flex;
+  text-align: center  ;
+}
+.pos p{
+  font-size: 24px;
+  margin-right: 5px;
+}

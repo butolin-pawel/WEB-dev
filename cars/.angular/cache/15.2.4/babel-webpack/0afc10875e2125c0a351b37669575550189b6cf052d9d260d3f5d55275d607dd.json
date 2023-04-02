@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { Service } from './services/service';","map":{"version":3,"mappings":"AAAA,SAASA,OAAO,QAAQ,oBAAoB","names":["Service"],"sourceRoot":"","sources":["C:\\WEB-dev\\cars\\src\\app\\REGapi\\services.ts"],"sourcesContent":["export { Service } from './services/service';\r\n"]},"metadata":{},"sourceType":"module","externalDependencies":[]}

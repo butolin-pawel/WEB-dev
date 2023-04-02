@@ -1,0 +1,114 @@
+openapi: 3.0.2
+info: 
+  title: 'Регистрация'
+  version: '1.0'
+  contact:
+    name: "OpenWeatherMap API"
+    url: "https://openweathermap.org/api"
+    email: "some_email@gmail.com"
+  description: 'Ed API'
+servers:
+  - url: 'http://localhost:4200'
+    description: 'Dev serv'
+paths:
+  /users:
+    get:
+      summary: Получить список
+      description: 'Get'
+      tags: 
+        - 'Пользователи'
+      operationId: getAllUsers
+      responses: 
+        '200':
+          description: 'Sucsesfull'
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Users"
+    post:
+      summary: Создать
+      description: Post
+      tags:
+        - 'Пользователи'
+      operationId: addUs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses: 
+        '200':
+          description: 'Sucsesfull'
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        '401':
+          description: 'Not Authorize'
+          content:
+            text/plain:
+              schema:
+                  title: You are not Authorize
+                  type: string
+                  example: Not found
+
+  /users/{login}:
+    get:
+      summary: Получить user
+      description: 'Get'
+      tags: 
+        - 'Пользователи'
+      operationId: getUser
+      parameters:
+        - name: login
+          in : path
+          required: true
+          schema:
+            $ref: "#/components/schemas/User"
+      responses: 
+        '200':
+          description: 'Sucsesfull'
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+  
+tags:
+  - name: "Пользователи"
+    description: "Get"
+  - name: "Машины"
+    description: "Get"
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - name
+        - login
+        - password
+      properties:
+        name:
+          type: string
+        login:
+          type: string
+        password:
+          type: string
+    Users:
+      type: array
+      items:
+        $ref: "#/components/schemas/User"   
+    
+    
+  securitySchemes:
+    appid:
+      type: apiKey
+      description: API key to authorize requests. If you don't have an OpenWeatherMap API key, use `fd4698c940c6d1da602a70ac34f0b147`.
+      name: appid
+      in: query
+security:
+- appid: [yddy]
+
+
+          
+

@@ -1,0 +1,28 @@
+<input readonly [(ngModel)]="status" style="border: 0;">
+<div class="log">
+
+    Имя
+  <input type="text" required [(ngModel)]="name"> <br>
+  E-mail
+  <input type="email" required [(ngModel)]="mail"> <br>
+  Пароль
+  <input type="password" required  [(ngModel)]="pas"> <br>
+  <button (click)="reg()" >Регистрация</button> <button (click)="log()"> Войти</button>
+
+</div>
+<button (click)="unLog()">Выйти</button>
+<!-- <div class="pos" *ngFor="let user of users">
+  <p > {{user.name}}</p>
+  <p> {{user.login}}</p>
+  <p> {{user.password}}</p>
+</div> -->
+<div>
+  <button (click)="showdata(autorized)">Показать список автомобилей</button>
+</div>
+<div class="list">
+  <div class="pos" *ngFor="let car of cars">
+    <p > {{car.carid}}</p>
+    <p> {{car.brand}}</p>
+    <p> {{car.model}}</p>
+  </div>
+</div>
