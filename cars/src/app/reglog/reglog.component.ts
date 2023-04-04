@@ -28,6 +28,7 @@ this.get();
   mail :string ='';
   pas : string = '';
   reg(){
+    if(this.name !="" && this.mail !=""&& this.pas!=""){
     let curr:User = {
       id : 0,
       name :this.name,
@@ -42,7 +43,9 @@ this.get();
     });
     this.get();
   }
+  }
   log(){
+    if(this.name !="" && this.mail !=""&& this.pas!=""){
     let curr:User = {
       id : 0,
       name :this.name,
@@ -61,6 +64,7 @@ this.get();
        }
     }
     // this.showdata(this.autorized);
+  }
   }
   showdata(usl : boolean){
     console.log(usl);
