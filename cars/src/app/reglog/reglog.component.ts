@@ -30,6 +30,7 @@ this.get();
   pas : string = '';
   reg(){
     let curr:User = {
+      id : 0,
       name :this.name,
       login : this.mail,
       password : this.pas
@@ -44,6 +45,7 @@ this.get();
   }
   log(){
     let curr:User = {
+      id : 0,
       name :this.name,
       login : this.mail,
       password : this.pas

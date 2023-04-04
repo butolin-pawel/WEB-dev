@@ -8,7 +8,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { CarsComponent } from './cars/cars.component';
 import { ReglogComponent } from './reglog/reglog.component';
 import { FormsModule } from '@angular/forms';
-import { InMemoryUsers } from './memory-us.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({

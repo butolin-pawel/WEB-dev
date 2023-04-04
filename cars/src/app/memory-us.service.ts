@@ -9,26 +9,26 @@ export class InMemoryUsers implements InMemoryDbService {
 
   createDb() {
     const users: User[] = [
-      {
-        name: 'Anatoly',
-        login: 'anaexample.com',
-        password: '123'
-      },
-      {
-        name: 'Vasya',
-        login: 'vasexample.com',
-        password: '123'
-      },
-      {
-        name: 'Bob',
-        login: 'bobexample.com',
-        password: '123'
-      },
-      {
-        name: 'Kolya',
-        login: 'kolyaexample.com',
-        password: '123'
-      },
+      // {
+      //   name: 'Anatoly',
+      //   login: 'anaexample.com',
+      //   password: '123'
+      // },
+      // {
+      //   name: 'Vasya',
+      //   login: 'vasexample.com',
+      //   password: '123'
+      // },
+      // {
+      //   name: 'Bob',
+      //   login: 'bobexample.com',
+      //   password: '123'
+      // },
+      // {
+      //   name: 'Kolya',
+      //   login: 'kolyaexample.com',
+      //   password: '123'
+      // },
     ];
 
 
