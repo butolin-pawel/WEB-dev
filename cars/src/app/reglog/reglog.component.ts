@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Car, User } from '../api/models';
 import { USService } from '../api/services';
-import { InMemoryUsers } from '../memory-us.service';
 import { CarsComponent } from '../cars/cars.component';
 import { Service } from '../api/services';
 @Component({
