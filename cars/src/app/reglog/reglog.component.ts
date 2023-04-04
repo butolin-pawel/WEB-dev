@@ -38,7 +38,8 @@ this.get();
     this.name = '';
     this.mail ='';
     this.pas = '';
-    this.serv.addUs({body:curr});
+    this.serv.addUs({body:curr}).subscribe( (eee) => {console.log(eee);
+    });
     this.get();
   }
   log(){
