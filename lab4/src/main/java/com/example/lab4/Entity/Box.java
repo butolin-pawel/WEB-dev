@@ -21,33 +21,20 @@ public class Box {
     @Column(columnDefinition = "serial", insertable = false, updatable = false)
     private Long id;
 
+
     @Column(name = "name", nullable = false)
     private String name;
 
+@Column(name="type", nullable = false)
+private String type;
+
+
+
     @OneToMany(mappedBy = "place")
-    private Set<Car_washes> washes = new HashSet<>();
+    private Set<Carwashes> washes = new HashSet<>();
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Set<Car_washes> getWashes() {
-        return washes;
-    }
-
-    public void setWashes(Set<Car_washes> washes) {
-        this.washes = washes;
+    @Override
+    public String toString(){
+        return this.name;
     }
 }

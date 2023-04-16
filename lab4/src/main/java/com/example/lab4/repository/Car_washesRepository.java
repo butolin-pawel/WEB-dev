@@ -1,7 +1,10 @@
 package com.example.lab4.repository;
 
-import com.example.lab4.Entity.Car_washes;
+import com.example.lab4.Entity.Carwashes;
 import org.springframework.data.repository.CrudRepository;
 
-public interface Car_washesRepository extends CrudRepository<Car_washes,Long> {
+import java.util.List;
+
+public interface Car_washesRepository extends CrudRepository<Carwashes,Long> {
+    List<Carwashes> findAll();
 }

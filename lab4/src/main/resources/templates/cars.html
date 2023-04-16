@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="utf-8">
     <title>Car Wash</title>
@@ -9,29 +10,30 @@
           crossorigin="anonymous">
 </head>
 <body>
-<div style="display: flex">
-<div sec:authorize="isAnonymous()" >
-    <form th:action="@{/authenticateTheUser}" method="POST">
-        <div class="input-group-prepend">
-            <input required placeholder="Login" name="username"  aria-describedby="inputGroup-sizing-sm" style="margin-right: 10px; border-radius: 5px;">
-            <input required type="password" placeholder="Password" name="password" aria-describedby="inputGroup-sizing-sm"  style="margin-right: 10px ; border-radius: 5px;">
-            <button type="submit"  class="btn btn-primary" style="background-color: darkblue" >Войти</button>
-        </div>
-    </form>
-</div>
-<li sec:authorize="isAuthenticated()" class="nav-item">
-    <form th:action="@{/logout}" method="POST">
-        <input style="margin-left:auto;" type="submit" class="btn btn-danger" value="Logout"/>
-    </form>
-</li>
-</div>
-<a sec:authorize="hasRole('ADMIN')" th:href="@{/cars/new}">Добавить новую машину</a>
-    <table>
+<div th:replace="~{Header :: navi(Home)}"/>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th> Гос.номер</th>
+            <th> Марка</th>
+            <th> Статус</th>
+            <th sec:authorize="hasRole('ADMIN')"> Действия</th>
+        </tr>
+        </thead>
+        <tbody>
         <tr th:each="car: ${cars}">
             <td th:text="${car.number}"></td>
             <td th:text="${car.brand}"></td>
             <td th:text="${car.status}"></td>
+            <td sec:authorize="hasRole('ADMIN')">
+                <a th:href="@{/cars/wash/{id} (id=${car.id})}"
+                   class="btn btn-success">Помыть</a>
+                <a th:href="@{/cars/edit/{id}(id=${car.id})}"
+                   class="btn btn-primary">Изменить</a>
+                <a th:href="@{/cars/del/{id} (id=${car.id})}" class="btn btn-danger">Удалить </a>
+            </td>
         </tr>
+        </tbody>
     </table>
 </body>
 </html>

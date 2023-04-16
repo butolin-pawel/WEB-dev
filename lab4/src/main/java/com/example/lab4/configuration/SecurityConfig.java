@@ -27,9 +27,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests() //
-                .antMatchers("/car/new").hasRole("ADMIN") //  ADMIN /admin/**
-                .antMatchers("/car/**").hasAnyRole("USER", "ADMIN")
-
+                .antMatchers("/cars/newcar").hasRole("ADMIN")
+                .antMatchers("/cars/newbox").hasRole("ADMIN")
+                .antMatchers("/cars/del/**").hasRole("ADMIN")
+                .antMatchers("/cars/edit").hasRole("ADMIN")
+                .antMatchers("/cars/edit/**").hasRole("ADMIN")
+                .antMatchers("/cars/del").hasRole("ADMIN")//  ADMIN /admin/**
+                .antMatchers("/cars/box").hasAnyRole("USER", "ADMIN")
+                .antMatchers("/cars/box/**").hasAnyRole( "ADMIN")
+                .antMatchers("/cars/wash/**").hasAnyRole( "ADMIN")
+                .antMatchers("/cars/wash").hasAnyRole( "ADMIN")
+                .antMatchers("/cars/washes/**").hasRole("ADMIN")
+                .antMatchers("/cars/washes").hasRole("ADMIN")
                 .and()
                 .formLogin() //
                 .loginPage("/cars")

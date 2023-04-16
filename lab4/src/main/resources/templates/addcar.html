@@ -2,9 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
     <title>Title</title>
 </head>
 <body>
-<h1>HUILO</h1>
+<div th:replace="~{Header :: navi(Home)}"/>
+<div class = "container">
+    <div class = "row">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class = "text-center"> Добавить машину </h1>
+            <div class = "card-body">
+                <form th:action="@{/cars}" th:object = "${car}" method="POST">
+                    <div class ="form-group">
+                        <label> Марка </label>
+                        <input
+                                type = "text"
+                                name = "brand"
+                                th:field = "*{brand}"
+                                class = "form-control"
+                                placeholder="Семенов"
+                        />
+                    </div>
+
+                    <div class ="form-group">
+                        <label> Номер </label>
+                        <input
+                                type = "text"
+                                name = "number"
+                                th:field = "*{number}"
+                                class = "form-control"
+                                placeholder="Иван"
+                        />
+                    </div>
+
+                    <div class ="form-group">
+                        <select name="group" th:field="*{status}" class="form-control" >
+                            <option th:value="Мытая">Мытая</option>
+                            <option th:value="Грязная">Грязная</option>
+                        </select>
+                    </div>
+
+<!--                    <div class ="form-group">-->
+<!--                        <label> Бокс для мойки </label>-->
+<!--                        <select name="group" class="form-control" >-->
+<!--                            <option th:each="box:${boxes}" th:value="${box.id}" th:text="${box.name}" th:selected="${box.id == 1}"></option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+
+
+
+                    <div class = "box-footer">
+                        <button type="submit" class = "btn btn-primary">
+                            Создать
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
