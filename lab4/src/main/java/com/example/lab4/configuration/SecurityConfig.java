@@ -37,8 +37,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .antMatchers("/cars/box/**").hasAnyRole( "ADMIN")
                 .antMatchers("/cars/wash/**").hasAnyRole( "ADMIN")
                 .antMatchers("/cars/wash").hasAnyRole( "ADMIN")
+                .antMatchers("/cars/washes").hasAnyRole("USER","ADMIN")
                 .antMatchers("/cars/washes/**").hasRole("ADMIN")
-                .antMatchers("/cars/washes").hasRole("ADMIN")
                 .and()
                 .formLogin() //
                 .loginPage("/cars")

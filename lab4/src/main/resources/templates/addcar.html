@@ -23,7 +23,7 @@
                                 name = "brand"
                                 th:field = "*{brand}"
                                 class = "form-control"
-                                placeholder="Семенов"
+                                placeholder="марка"
                         />
                     </div>
 
@@ -34,11 +34,12 @@
                                 name = "number"
                                 th:field = "*{number}"
                                 class = "form-control"
-                                placeholder="Иван"
+                                placeholder="А000АА00"
                         />
                     </div>
 
                     <div class ="form-group">
+                        <label> Статус </label>
                         <select name="group" th:field="*{status}" class="form-control" >
                             <option th:value="Мытая">Мытая</option>
                             <option th:value="Грязная">Грязная</option>
