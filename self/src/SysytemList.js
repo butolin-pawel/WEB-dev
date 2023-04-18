@@ -1,32 +1,28 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import axios from 'axios';
 
 export default class SystemList extends React.Component {
   ish;
-  res =[];
+ 
   componentDidMount() {
-    axios.get(`https://new.vyatsu.ru/sveden/common`)
+    axios.get(`https://www.vyatsu.ru/biblioteka-3/elektronnaya-biblioteka/elektronno-bibliotechnyie-sistemyi.html`)
         .then(res => {
             const tp = res.data;
             this.ish = tp;
-            console.log(this.ish);
-        })
-        
-        
-  }
-  findAddresses() {
-    const regex = /\d{6},/ //\w+ \w+, г. \w+, \w+. \w+, \w. \d{1,2,3}\d\S+/;
-    let match;  
-    while ((match = regex.exec(this.ish))) {
-      this.res.push(match);
-    }
+            var dc =new DOMParser().parseFromString(this.ish,"text/html");
+            var dd = dc.getElementsByClassName('items')[0];
+            var ff = dd.getElementsByTagName('h6');
+            for(let i = 0; i < ff.length; i++){
+              document.getElementById("container").innerText +=ff[i].textContent + '\n';
+            }
+            
+      })
+      
   }
   render() {
     return (
-      <div> 
-        {this.ish}
+      <div id='container' class="cont">
         
-          
       </div>
     )
   }
