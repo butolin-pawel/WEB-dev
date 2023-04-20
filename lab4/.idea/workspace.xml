@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a552eeb-9ba7-4eee-83fd-f90d444bce56" name="Changes" comment="Финиш">
+    <list default="true" id="7a552eeb-9ba7-4eee-83fd-f90d444bce56" name="Changes" comment="Финиш accept">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4/configuration/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addcar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addcar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab4/configuration/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab4/configuration/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/addbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addbox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/addcar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addcar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,8 @@
       <workItem from="1681313209171" duration="2611000" />
       <workItem from="1681458789070" duration="10214000" />
       <workItem from="1681477921942" duration="28619000" />
-      <workItem from="1681829067102" duration="867000" />
+      <workItem from="1681829067102" duration="939000" />
+      <workItem from="1681974451014" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="Только авторизация ошибка перехода по страницам">
       <created>1681472733133</created>
@@ -117,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681661130577</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Финиш accept">
+      <created>1681829988232</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681829988232</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +155,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Только авторизация ошибка перехода по страницам" />
     <MESSAGE value="Финиш" />
-    <option name="LAST_COMMIT_MESSAGE" value="Финиш" />
+    <MESSAGE value="Финиш accept" />
+    <option name="LAST_COMMIT_MESSAGE" value="Финиш accept" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
