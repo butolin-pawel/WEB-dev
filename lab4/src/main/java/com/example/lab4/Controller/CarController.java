@@ -101,6 +101,7 @@ public class CarController {
         svcar.setId(id);
         svcar.setStatus("Мытая");
         carwashes.setCar(svcar);
+        carwashes.setActive(true);
         carService.editCar(svcar);
         car_washesService.saveWash(carwashes);
         return "redirect:/cars";

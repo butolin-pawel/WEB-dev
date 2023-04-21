@@ -18,7 +18,7 @@ public class Car_washesImpl implements Car_washesService {
 
     @Override
     public List<Carwashes> getAllWash() {
-        return car_washesRepository.findAll();
+        return car_washesRepository.findAllByActive(true);
     }
 
     @Override
@@ -28,7 +28,9 @@ public class Car_washesImpl implements Car_washesService {
 
     @Override
     public void deleteWashById(Long id) {
-        car_washesRepository.deleteById(id);
+       Carwashes carwashes =  car_washesRepository.findById(id).get();
+        carwashes.setActive(false);
+        car_washesRepository.save(carwashes);
     }
 
     @Override

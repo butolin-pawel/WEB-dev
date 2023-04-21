@@ -78,6 +78,11 @@
             <version>1.18.22</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-spring-boot-starter</artifactId>
+            <version>14.4.4</version>
+        </dependency>
     </dependencies>
 
     <build>

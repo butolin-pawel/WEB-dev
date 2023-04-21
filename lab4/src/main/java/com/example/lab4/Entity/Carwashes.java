@@ -28,6 +28,8 @@ public class Carwashes {
     @Column(name = "date")
     private Date date;
 
+    @Column(name = "active",nullable = false)
+    private boolean active;
 
     public void setDate(String date){
         String[] datee= date.split("-");
