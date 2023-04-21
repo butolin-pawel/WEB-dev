@@ -1,0 +1,9 @@
+{
+    "name": "indexdb-file-uploader",
+    "version": "1.0.0",
+    "description": "Практика 5 WEb-Dеv вариант 3.",
+    "main": "index.html",
+    "dependencies": {
+        "indexdb-file-uploader": "^1.0.0"
+    }
+}
