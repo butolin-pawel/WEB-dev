@@ -22,6 +22,7 @@ async function uploadFile() {
   try {
     await tx.objectStore('tables').add({name, file});
     await list();
+    input.files = null;
   } catch(err) {
     if (err.name == 'ConstraintError') {
       alert("Такая таблица уже существует");
@@ -46,11 +47,11 @@ async function init() {
 
 async function list() {
   let tx = db.transaction('tables');
-  let bookStore = tx.objectStore('tables');
+  let tabStore = tx.objectStore('tables');
 
-  let books = await bookStore.getAll();
-  if (books.length){
-    listElem.innerHTML = books.map(table => 
+  let tables = await tabStore.getAll();
+  if (tables.length){
+    listElem.innerHTML = tables.map(table => 
     `<li>
         <a href='${URL.createObjectURL(new Blob([table.file], {type: 'xlsx'}))}' download="${table.name}"> ${table.name} </a>
       </li>`).join('');
