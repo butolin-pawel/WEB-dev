@@ -1,8 +1,9 @@
 package com.example.lab4.Entity;
+import com.vaadin.flow.component.HasValue;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,10 +11,10 @@ import java.util.Set;
 @Table(name = "cars")
 @NoArgsConstructor
 @Data
-public class Car {
+public class Car  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial", insertable = false, updatable = false)
+    @Column(name="id",columnDefinition = "serial", insertable = false, updatable = false)
     private Long id;
 
 
@@ -27,7 +28,7 @@ public class Car {
     @Column(name = "status", nullable = true)
     private String status;
 
-    @OneToMany(mappedBy = "car")
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "car")
     private Set<Carwashes> washes= new HashSet<>();
     @Override
     public String toString(){

@@ -2,7 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f7466e9-17dc-4426-8601-0b7e4fdeffa2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab4/src/main/java/com/example/lab4/Views/EmptyView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab4/src/main/java/com/example/lab4/Views/ViewAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/.idea/dataSources/1f8e0907-846e-48e3-9104-3004b4cc6fd0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/.idea/dataSources/1f8e0907-846e-48e3-9104-3004b4cc6fd0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/VaadinDevmodeGizmo.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/VaadinDevmodeGizmo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/comboBoxConnector-es6.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/comboBoxConnector-es6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/comboBoxConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/comboBoxConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/contextMenuConnector-es6.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/contextMenuConnector-es6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/contextMenuConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/contextMenuConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/datepickerConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/datepickerConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/dndConnector-es6.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/dndConnector-es6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/dndConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/dndConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/flow-component-renderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/flow-component-renderer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/gridConnector-es6.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/gridConnector-es6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/gridConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/gridConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/ironListConnector-es6.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/ironListConnector-es6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/ironListConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/ironListConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/ironListStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/ironListStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/ironListStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/ironListStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/menubarConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/menubarConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/selectConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/selectConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/timepickerConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/timepickerConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/vaadin-big-decimal-field.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/vaadin-big-decimal-field.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/vaadin-grid-flow-selection-column.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/node_modules/@vaadin/flow-frontend/vaadin-grid-flow-selection-column.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/src/main/java/com/example/lab4/configuration/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/src/main/java/com/example/lab4/configuration/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/src/main/java/com/example/lab4/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/src/main/java/com/example/lab4/configuration/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/target/classes/com/example/lab4/configuration/SecurityConfig.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/WEB-dev/Wlab4",
+    "last_opened_file_path": "C:/WEB-dev",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
@@ -41,6 +69,7 @@
       <updated>1681049748883</updated>
       <workItem from="1681049753592" duration="208000" />
       <workItem from="1681049996738" duration="46000" />
+      <workItem from="1682543111319" duration="37000" />
     </task>
     <servers />
   </component>

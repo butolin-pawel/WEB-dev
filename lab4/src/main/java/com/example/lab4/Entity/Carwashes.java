@@ -3,7 +3,10 @@ package com.example.lab4.Entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+import org.springframework.cglib.core.Local;
+
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -14,7 +17,7 @@ import java.util.Date;
 public class Carwashes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial", insertable = false, updatable = false)
+    @Column(name="id",columnDefinition = "serial", insertable = false, updatable = false)
     private Long id;
 
     @ManyToOne
@@ -40,5 +43,16 @@ public class Carwashes {
         this.date = date_;
 
         }
+        public void setLocDate(LocalDate ld){
+            Date date_ = new Date();
+            date_.setYear(ld.getYear()-1900);
+            date_.setMonth(ld.getMonthValue() -1);
+            date_.setDate(ld.getDayOfMonth());
+            this.date = date_;
+        }
+        public LocalDate getLocDate(){
+        return LocalDate.of(date.getYear()+1900,date.getMonth()+1,date.getDate());
+    }
+
 
 }
