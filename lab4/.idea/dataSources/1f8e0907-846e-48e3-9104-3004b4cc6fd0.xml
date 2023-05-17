@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.41">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>4713214</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4713433</IntrospectionStateNumber>
       <ServerVersion>14.5</ServerVersion>
-      <StartupTime>1681477809</StartupTime>
+      <StartupTime>1683730970</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -47,14 +47,14 @@ false Africa/Blantyre
 false Africa/Brazzaville
 false Africa/Bujumbura
 false Africa/Cairo
-true Africa/Casablanca
+false Africa/Casablanca
 true Africa/Ceuta
 false Africa/Conakry
 false Africa/Dakar
 false Africa/Dar_es_Salaam
 false Africa/Djibouti
 false Africa/Douala
-true Africa/El_Aaiun
+false Africa/El_Aaiun
 false Africa/Freetown
 false Africa/Gaborone
 false Africa/Harare
@@ -803,11 +803,12 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>4713214</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4713433</IntrospectionStateNumber>
       <ObjectId>30412</ObjectId>
       <Relations>sequence|table|30471|30472|1
 sequence|table|30480|30481|1
 sequence|table|30489|30490|1
+sequence|table|30574|30575|1
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4323,7 +4324,7 @@ sequence|table|30489|30490|1
     <schema id="283" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>4713214</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4713433</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4352,51 +4353,63 @@ sequence|table|30489|30490|1
       <StateNumber>4713097</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="291" parent="283" name="authorities">
+    <sequence id="291" parent="283" name="table_name_id_seq">
+      <DataType>integer|0s</DataType>
+      <ObjectId>30574</ObjectId>
+      <StateNumber>4713430</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="292" parent="283" name="authorities">
       <ObjectId>30511</ObjectId>
       <StateNumber>4713108</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="292" parent="283" name="box">
+    <table id="293" parent="283" name="box">
       <ObjectId>30481</ObjectId>
       <StateNumber>4713177</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="293" parent="283" name="car_wash">
+    <table id="294" parent="283" name="car_wash">
       <ObjectId>30490</ObjectId>
-      <StateNumber>4713099</StateNumber>
+      <StateNumber>4713266</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="294" parent="283" name="cars">
+    <table id="295" parent="283" name="cars">
       <ObjectId>30472</ObjectId>
       <StateNumber>4713099</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="295" parent="283" name="users">
+    <table id="296" parent="283" name="user">
+      <ObjectId>30575</ObjectId>
+      <StateNumber>4713432</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="297" parent="283" name="users">
       <ObjectId>30506</ObjectId>
       <StateNumber>4713108</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="296" parent="291" name="username">
+    <column id="298" parent="292" name="username">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>4713108</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="297" parent="291" name="authority">
+    <column id="299" parent="292" name="authority">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>4713108</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="298" parent="291" name="authorities_ibfk_1">
+    <foreign-key id="300" parent="292" name="authorities_ibfk_1">
       <ColNames>username</ColNames>
       <ObjectId>30516</ObjectId>
       <RefColNames>username</RefColNames>
@@ -4406,7 +4419,7 @@ sequence|table|30489|30490|1
       <RefTableName>users</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="299" parent="291" name="authorities_idx">
+    <index id="301" parent="292" name="authorities_idx">
       <ColNames>username
 authority</ColNames>
       <ObjectId>30514</ObjectId>
@@ -4420,12 +4433,12 @@ default</CollationNames>
       <CollationParentNames>pg_catalog
 pg_catalog</CollationParentNames>
     </index>
-    <key id="300" parent="291" name="authorities_idx">
+    <key id="302" parent="292" name="authorities_idx">
       <ObjectId>30515</ObjectId>
       <StateNumber>4713108</StateNumber>
       <UnderlyingIndexId>30514</UnderlyingIndexId>
     </key>
-    <column id="301" parent="292" name="id">
+    <column id="303" parent="293" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;box_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4433,19 +4446,19 @@ pg_catalog</CollationParentNames>
       <StateNumber>4713098</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="302" parent="292" name="name">
+    <column id="304" parent="293" name="name">
       <DataType>text|0s</DataType>
       <Position>2</Position>
       <StateNumber>4713098</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="303" parent="292" name="type">
+    <column id="305" parent="293" name="type">
       <DataType>varchar(30)|0s</DataType>
       <Position>4</Position>
       <StateNumber>4713177</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="304" parent="292" name="box_pkey">
+    <index id="306" parent="293" name="box_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>30487</ObjectId>
@@ -4454,14 +4467,14 @@ pg_catalog</CollationParentNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="305" parent="292" name="box_pkey">
+    <key id="307" parent="293" name="box_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>30488</ObjectId>
       <Primary>1</Primary>
       <StateNumber>4713098</StateNumber>
       <UnderlyingIndexId>30487</UnderlyingIndexId>
     </key>
-    <column id="306" parent="293" name="id">
+    <column id="308" parent="294" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;car_wash_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4469,25 +4482,33 @@ pg_catalog</CollationParentNames>
       <StateNumber>4713099</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="307" parent="293" name="car">
+    <column id="309" parent="294" name="car">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
       <StateNumber>4713099</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="308" parent="293" name="place">
+    <column id="310" parent="294" name="place">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
       <StateNumber>4713099</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="309" parent="293" name="date">
+    <column id="311" parent="294" name="date">
       <DataType>date|0s</DataType>
       <Position>4</Position>
       <StateNumber>4713099</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <foreign-key id="310" parent="293" name="car_wash_car_fkey">
+    <column id="312" parent="294" name="active">
+      <DataType>boolean|0s</DataType>
+      <DefaultExpression>true</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>4713268</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <foreign-key id="313" parent="294" name="car_wash_car_fkey">
       <ColNames>car</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>30536</ObjectId>
@@ -4500,7 +4521,7 @@ pg_catalog</CollationParentNames>
       <RefTableName>cars</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="311" parent="293" name="car_wash_place_fkey">
+    <foreign-key id="314" parent="294" name="car_wash_place_fkey">
       <ColNames>place</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>30541</ObjectId>
@@ -4513,7 +4534,7 @@ pg_catalog</CollationParentNames>
       <RefTableName>box</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="312" parent="293" name="car_wash_pkey">
+    <index id="315" parent="294" name="car_wash_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>30494</ObjectId>
@@ -4522,14 +4543,14 @@ pg_catalog</CollationParentNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="313" parent="293" name="car_wash_pkey">
+    <key id="316" parent="294" name="car_wash_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>30495</ObjectId>
       <Primary>1</Primary>
       <StateNumber>4713099</StateNumber>
       <UnderlyingIndexId>30494</UnderlyingIndexId>
     </key>
-    <column id="314" parent="294" name="id">
+    <column id="317" parent="295" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;cars_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4537,25 +4558,25 @@ pg_catalog</CollationParentNames>
       <StateNumber>4713097</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="315" parent="294" name="brand">
+    <column id="318" parent="295" name="brand">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
       <StateNumber>4713097</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="316" parent="294" name="number">
+    <column id="319" parent="295" name="number">
       <DataType>char(9)|0s</DataType>
       <Position>3</Position>
       <StateNumber>4713097</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="317" parent="294" name="status">
+    <column id="320" parent="295" name="status">
       <DataType>text|0s</DataType>
       <Position>4</Position>
       <StateNumber>4713097</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="318" parent="294" name="cars_pkey">
+    <index id="321" parent="295" name="cars_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>30478</ObjectId>
@@ -4564,35 +4585,76 @@ pg_catalog</CollationParentNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="319" parent="294" name="cars_pkey">
+    <key id="322" parent="295" name="cars_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>30479</ObjectId>
       <Primary>1</Primary>
       <StateNumber>4713097</StateNumber>
       <UnderlyingIndexId>30478</UnderlyingIndexId>
     </key>
-    <column id="320" parent="295" name="username">
+    <column id="323" parent="296" name="id">
+      <DataType>integer|0s</DataType>
+      <DefaultExpression>nextval(&apos;table_name_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>4713430</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="324" parent="296" name="username">
+      <DataType>text|0s</DataType>
+      <Position>2</Position>
+      <StateNumber>4713430</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="325" parent="296" name="password">
+      <DataType>text|0s</DataType>
+      <Position>3</Position>
+      <StateNumber>4713430</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="326" parent="296" name="rol">
+      <DataType>text|0s</DataType>
+      <Position>4</Position>
+      <StateNumber>4713430</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="327" parent="296" name="table_name_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>30581</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>4713430</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="328" parent="296" name="table_name_pkey">
+      <ObjectId>30582</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>4713430</StateNumber>
+      <UnderlyingIndexId>30581</UnderlyingIndexId>
+    </key>
+    <column id="329" parent="297" name="username">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>4713106</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="321" parent="295" name="password">
+    <column id="330" parent="297" name="password">
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>4713106</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="322" parent="295" name="enabled">
+    <column id="331" parent="297" name="enabled">
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>4713106</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <index id="323" parent="295" name="users_pkey">
+    <index id="332" parent="297" name="users_pkey">
       <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>30509</ObjectId>
@@ -4604,7 +4666,7 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="324" parent="295" name="users_pkey">
+    <key id="333" parent="297" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>30510</ObjectId>
       <Primary>1</Primary>

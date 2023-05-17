@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface Car_washesRepository extends CrudRepository<Carwashes,Long> {
     List<Carwashes> findAll();
+    List<Carwashes> findAllByActive(boolean active);
 }

@@ -41,4 +41,6 @@ public class BoxServiceImpl implements BoxService {
     public void editBox(Box box) {
         boxRepository.save(box);
     }
+
+
 }

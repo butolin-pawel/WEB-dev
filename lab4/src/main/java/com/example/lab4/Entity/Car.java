@@ -9,14 +9,43 @@ import java.util.Set;
 @Entity
 @Table(name = "cars")
 @NoArgsConstructor
-@Data
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "serial", insertable = false, updatable = false)
     private Long id;
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     @Column(name = "brand", nullable = false)
     private String brand;
@@ -26,6 +55,8 @@ public class Car {
 
     @Column(name = "status", nullable = true)
     private String status;
+
+
 
     @OneToMany(mappedBy = "car")
     private Set<Carwashes> washes= new HashSet<>();
