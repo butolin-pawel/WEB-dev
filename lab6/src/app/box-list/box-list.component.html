@@ -1,0 +1,20 @@
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+  <tr>
+      <th> Название</th>
+      <th> Тип</th>
+      <th [hidden]="!this.app.authAdmin"> Действия</th>
+  </tr>
+  </thead>
+  <tbody>
+<tr *ngFor ="let box of boxes">
+  <td>{{box.name}}</td>
+  <td >{{box.type}}</td>
+    <td [hidden]="!this.app.authAdmin">
+        <a routerLink="/editbox/{{box.id}}" routerLinkActive="active-link"
+           class="btn btn-primary">Изменить</a>
+        <a (click)="remove(box.id)" class="btn btn-danger">Удалить </a>
+    </td>
+</tr>
+  </tbody>
+</table>

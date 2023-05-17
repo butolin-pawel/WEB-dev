@@ -1,0 +1,46 @@
+<div class = "container">
+  <div class = "row">
+      <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+          <h1 class = "text-center"> Изменить машину </h1>
+          <div class = "card-body">
+              <form (ngSubmit)="onSubmit()" method="PUT">
+                  <div class ="form-group">
+                      <label> Марка </label>
+                      <input
+                              type = "text"
+                              name = "brand"
+                              [(ngModel)]="car.brand"
+                              class = "form-control"
+                              placeholder="марка"
+                      />
+                  </div>
+
+                  <div class ="form-group">
+                      <label> Номер </label>
+                      <input
+                              type = "text"
+                              name = "number"
+                              [(ngModel)]="car.number"
+                              class = "form-control"
+                              placeholder="А000АА00"
+                      />
+                  </div>
+
+                  <div class ="form-group">
+                      <label> Статус </label>
+                      <select name="group" [(ngModel)]="car.status" class="form-control" >
+                          <option th:value="Мытая">Мытая</option>
+                          <option th:value="Грязная">Грязная</option>
+                      </select>
+                  </div>
+
+                  <div class = "box-footer">
+                      <button type="submit" class = "btn btn-primary">
+                          Изменить
+                      </button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

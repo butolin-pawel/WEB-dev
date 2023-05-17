@@ -1,0 +1,26 @@
+
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+  <tr>
+      <th> Гос.номер</th>
+      <th> Марка</th>
+      <th> Статус</th>
+      <th [hidden]="!this.app.authAdmin"> Действия</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor ="let car of cars">
+      <td >{{car.number}}</td>
+      <td >{{car.brand}}</td>
+      <td >{{car.status}}</td>
+      <td [hidden]="!this.app.authAdmin">
+          <a routerLink="/newwash/{{car.id}}"
+             class="btn btn-success">Помыть</a>
+          <a  routerLink="/editcar/{{car.id}}"
+             class="btn btn-primary">Изменить</a>
+          <a (click)="remove(car.id)"
+             class="btn btn-danger">Удалить </a>
+      </td>
+  </tr>
+  </tbody>
+</table>

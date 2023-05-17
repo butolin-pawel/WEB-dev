@@ -1,0 +1,24 @@
+<div style="display: flex" class="navbar navbar-expand-lg navbar-dark bg-primary " th:fragment="navi(activeTab)">
+  <div [hidden]="this.app.authenticated" >
+      <form (sumbit)="login()" method="POST">
+          <div class="input-group-prepend">
+              <input required placeholder="Login" name="username"  [(ngModel)]="credentials.username"  aria-describedby="inputGroup-sizing-sm" style="margin-right: 10px; border-radius: 5px;">
+              <input required type="password" placeholder="Password" [(ngModel)]="credentials.password" name="password" aria-describedby="inputGroup-sizing-sm"  style="margin-right: 10px ; border-radius: 5px;">
+              <button type="submit" (click)="login()"  class="btn btn-primary" style="background-color: darkblue" >Войти</button>
+          </div>
+      </form>
+  </div>
+  <div [hidden]="!this.app.authenticated"  class="nav-item" style="margin-right: 5px;">
+      <form  method="POST">
+          <input style="margin-left:auto;" (click)="logout()" type="submit" class="btn btn-danger" value="Logout"/>
+      </form>
+  </div>
+
+<div  [hidden]="!this.app.authenticated" >
+  <a  [hidden]="!this.app.authAdmin" routerLink="/newcar" routerLinkActive="active-link" class="btn btn-light">Добавить новую машину</a>
+  <a  [hidden]="!this.app.authAdmin" routerLink="/newbox" routerLinkActive="active-link" class="btn btn-light">Добавить бокс</a>
+  <a routerLink="/" routerLinkActive="active-link" class="btn btn-light">Автомобили</a>
+  <a routerLink="/boxes" routerLinkActive="active-link" class="btn btn-light">Все боксы</a>
+  <a routerLink="/washes" routerLinkActive="active-link" class="btn btn-light">История моек</a>
+</div>
+</div>
