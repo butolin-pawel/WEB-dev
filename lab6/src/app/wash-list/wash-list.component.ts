@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WashService } from '../wash.service';
 import { Router } from '@angular/router';
 import { Wash } from '../class/wash';
@@ -9,7 +9,7 @@ import { AppService } from '../app.service';
   templateUrl: './wash-list.component.html',
   styleUrls: ['./wash-list.component.css']
 })
-export class WashListComponent {
+export class WashListComponent implements OnInit{
   washes? : Wash[];
   constructor(public app: AppService,private washServ : WashService,private router: Router){
   }
@@ -22,6 +22,7 @@ export class WashListComponent {
  remove(id : number){
    this.washServ.deleteWash(id).subscribe(() =>{
      this.router.navigate(['/redirect_wash']);
+     this.ngOnInit();
    }
      );
 

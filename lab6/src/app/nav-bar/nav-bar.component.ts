@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AppService } from '../app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,7 +10,7 @@ import { AppService } from '../app.service';
 })
 export class NavBarComponent {
   credentials = {username: '', password: ''};
-  constructor(public app: AppService, private http: HttpClient) {
+  constructor(private router: Router,public app: AppService, private http: HttpClient) {
   }
   login(){
     console.log("ПЫТАЮСЬ");
@@ -21,5 +22,6 @@ export class NavBarComponent {
   logout(){
     this.app.authenticated = false;
     this.app.authAdmin = false;
+    this.router.navigate(['/']);
   }
 }

@@ -50,6 +50,6 @@ export class WashCarComponent {
   }
 
   gotoUserList() {
-    this.router.navigate(['/redirect_wash']);
+    this.router.navigate(['/']);
   }
 }

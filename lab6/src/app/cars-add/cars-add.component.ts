@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Car } from '../class/car';
 import { CarServiceService } from '../car-service.service';
 import { Router } from '@angular/router';
+import { CarsListComponent } from '../cars-list/cars-list.component';
 
 @Component({
   selector: 'app-cars-add',
@@ -14,11 +15,15 @@ export class CarsAddComponent {
 
   }
   onSubmit() {
-    this.carServ.save(this.car);
-    this.gotoUserList();
+    this.carServ.save(this.car).subscribe(
+      () =>{
+        this.gotoUserList();
+      }
+    );
+
   }
 
   gotoUserList() {
-    this.router.navigate(['/redirect_car']);
+    this.router.navigate(['/']);
   }
 }

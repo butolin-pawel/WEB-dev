@@ -22,7 +22,7 @@ private URL: string;
 
   }
   public save(car : Car) {
-    return this.http.post<Car>(this.URL,car).subscribe();
+    return this.http.post<Car>(this.URL,car);
 
   }
   public update(car : Car){
