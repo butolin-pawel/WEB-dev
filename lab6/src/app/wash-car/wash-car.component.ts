@@ -40,13 +40,16 @@ export class WashCarComponent {
         this.wash.car = this.car;
          this.wash.place = this.box;
          this.wash.active = true;
-        this.washServ.save(this.wash);
+        this.washServ.save(this.wash).subscribe(() =>{
+          this.gotoUserList();
+        });
+
       }
      )
 
 
 
-    this.gotoUserList();
+
   }
 
   gotoUserList() {

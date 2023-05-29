@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BoxService } from '../box.service';
 import { Router } from '@angular/router';
 import { Box } from '../class/box';
+import { WebsocketService } from '../websocket.service';
 
 @Component({
   selector: 'app-box-add',
@@ -14,11 +15,9 @@ export class BoxAddComponent {
 
   }
   onSubmit() {
-    this.boxServ.save(this.box);
-    this.gotoUserList();
+    this.boxServ.save(this.box).subscribe(()=>{this.router.navigate(['/redirect_box']);});
+
+
   }
 
-  gotoUserList() {
-    this.router.navigate(['/redirect_box']);
-  }
 }

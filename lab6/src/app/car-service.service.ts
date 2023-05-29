@@ -26,7 +26,7 @@ private URL: string;
 
   }
   public update(car : Car){
-    return this.http.put<Car>(this.URL,car).subscribe();
+    return this.http.put<Car>(this.URL,car);
   }
   public findById(id : number) : Observable<Car>{
     return this.http.get<Car>(this.URL+'/'+id);

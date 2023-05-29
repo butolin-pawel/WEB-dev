@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Wash } from '../class/wash';
 import * as moment from 'moment';
 import { AppService } from '../app.service';
+import { WebsocketService } from '../websocket.service';
 @Component({
   selector: 'app-wash-list',
   templateUrl: './wash-list.component.html',
@@ -11,18 +12,22 @@ import { AppService } from '../app.service';
 })
 export class WashListComponent implements OnInit{
   washes? : Wash[];
-  constructor(public app: AppService,private washServ : WashService,private router: Router){
+  constructor(public app: AppService,private washServ : WashService,private router: Router,private webSocketService: WebsocketService){
   }
 
   ngOnInit() :void {
    this.washServ.findAll().subscribe(data => {
      this.washes = data;
    });
+   this.webSocketService.connectWash().subscribe((data) => {
+    this.washes = data;
+  });
  }
  remove(id : number){
    this.washServ.deleteWash(id).subscribe(() =>{
-     this.router.navigate(['/redirect_wash']);
-     this.ngOnInit();
+    this.washServ.findAll().subscribe(data => {
+      this.washes = data;
+    });
    }
      );
 

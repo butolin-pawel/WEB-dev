@@ -23,7 +23,6 @@ public class Auth {
     @PostMapping(value = "/vhod")
     public Map<String,Object> getAuth(@RequestBody User user){
         Map<String,Object> map=new HashMap<>();
-        System.out.println(user.getPassword() + user.getUsername());
         User us = userService.getUserByUsernameAndPassword(user.getUsername(), user.getPassword());
         if(us != null){
             map.put("auth",true);

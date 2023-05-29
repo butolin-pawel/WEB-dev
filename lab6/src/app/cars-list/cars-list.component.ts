@@ -4,6 +4,7 @@ import { Car } from '../class/car';
 import { Router } from '@angular/router';
 import { delay } from 'rxjs';
 import { AppService } from '../app.service';
+import { WebsocketService } from '../websocket.service';
 
 @Component({
   selector: 'app-cars-list',
@@ -12,18 +13,22 @@ import { AppService } from '../app.service';
 })
 export class CarsListComponent implements OnInit{
  cars? : Car[];
- constructor(public app: AppService,  private carServiceServise : CarServiceService,private router: Router){
+ constructor(public app: AppService,  private carServiceServise : CarServiceService,private router: Router, private webSocketService : WebsocketService){
  }
 
  ngOnInit() :void {
   this.carServiceServise.findAll().subscribe(data => {
     this.cars = data;
   });
+  this.webSocketService.connectCar().subscribe((data) =>{
+    this.cars = data;
+  })
 }
 remove(id : number){
   this.carServiceServise.deleteCar(id).subscribe(() =>{
-    this.router.navigate(['/redirect_car']);
-    this.ngOnInit();
+    this.carServiceServise.findAll().subscribe(data => {
+      this.cars = data;
+    });
   }
     );
 

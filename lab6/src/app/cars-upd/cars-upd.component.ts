@@ -15,8 +15,10 @@ export class CarsUpdComponent {
     this.car = new Car();
   }
   onSubmit() {
-    this.carServ.update(this.car);
-    this.gotoUserList();
+    this.carServ.update(this.car).subscribe(() => {
+      this.gotoUserList();
+    });
+
   }
   ngOnInit() :void {
      this.carServ.findById(this.route.snapshot.params['id']).subscribe(

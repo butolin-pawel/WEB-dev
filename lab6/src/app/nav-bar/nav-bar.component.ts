@@ -22,6 +22,8 @@ export class NavBarComponent {
   logout(){
     this.app.authenticated = false;
     this.app.authAdmin = false;
+    localStorage.setItem('role', String(0));
+    localStorage.setItem('auth', String(0));
     this.router.navigate(['/']);
   }
 }

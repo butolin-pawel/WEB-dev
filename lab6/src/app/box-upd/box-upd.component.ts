@@ -15,8 +15,10 @@ export class BoxUpdComponent {
     this.box = new Box();
   }
   onSubmit() {
-    this.boxServ.update(this.box);
-    this.gotoUserList();
+    this.boxServ.update(this.box).subscribe(() =>{
+      this.gotoUserList();
+    });
+
   }
   ngOnInit() :void {
      this.boxServ.findById(this.route.snapshot.params['id']).subscribe(

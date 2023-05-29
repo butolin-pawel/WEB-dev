@@ -5,8 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a552eeb-9ba7-4eee-83fd-f90d444bce56" name="Changes" comment="Финиш accept">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1f8e0907-846e-48e3-9104-3004b4cc6fd0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1f8e0907-846e-48e3-9104-3004b4cc6fd0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_2_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_3_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_5_3_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4/Controller/WebSocketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4/Controller/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4/Controller/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4/Controller/BackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4/Controller/BackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab4/Controller/Auth.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab4/Controller/Auth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab4/Controller/BackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab4/Controller/BackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/10.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/11.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/12.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/14.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/18.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/18.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/19.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/19.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/3.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/4.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/5.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/6.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/7.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/8.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/9.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/.angular/cache/15.2.8/angular-webpack/af64e6104bb431ce7f58cab347750231291c68dd/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/node_modules/__ngcc_entry_points__.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/node_modules/socket.io-parser/build/cjs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/node_modules/socket.io-parser/build/cjs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/node_modules/socket.io-parser/build/esm-debug/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/node_modules/socket.io-parser/build/esm-debug/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/node_modules/socket.io-parser/build/esm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/node_modules/socket.io-parser/build/esm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/node_modules/socket.io-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/node_modules/socket.io-parser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +90,7 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Клонированные репозитории/тест связь&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -123,6 +161,11 @@
       <workItem from="1684169622616" duration="3522000" />
       <workItem from="1684175152836" duration="26082000" />
       <workItem from="1684499892280" duration="2231000" />
+      <workItem from="1684787144598" duration="413000" />
+      <workItem from="1684935924634" duration="262000" />
+      <workItem from="1685007252146" duration="13750000" />
+      <workItem from="1685274950146" duration="104000" />
+      <workItem from="1685278732279" duration="10452000" />
     </task>
     <task id="LOCAL-00001" summary="Только авторизация ошибка перехода по страницам">
       <created>1681472733133</created>

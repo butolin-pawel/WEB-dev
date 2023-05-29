@@ -22,13 +22,12 @@ export class BoxService {
 
   }
   public save(box : Box) {
-    console.log(box);
 
-    return this.http.post<Box>(this.URL,box).subscribe();
+    return this.http.post<Box>(this.URL,box);
 
   }
   public update(box : Box){
-    return this.http.put<Box>(this.URL,box).subscribe();
+    return this.http.put<Box>(this.URL,box);
   }
   public findById(id : number) : Observable<Box>{
     return this.http.get<Box>(this.URL+'/'+id);

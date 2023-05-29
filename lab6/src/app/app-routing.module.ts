@@ -10,6 +10,7 @@ import { BoxUpdComponent } from './box-upd/box-upd.component';
 import { WashListComponent } from './wash-list/wash-list.component';
 import { WashCarComponent } from './wash-car/wash-car.component';
 import { WashUpdComponent } from './wash-upd/wash-upd.component';
+import { TestsocketComponent } from './testsocket/testsocket.component';
 
 const routes: Routes = [
   {path: '',  component: CarsListComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'washes',  component: WashListComponent},
   {path: 'newwash/:id', component: WashCarComponent},
   {path: 'editwash/:id', component: WashUpdComponent},
+  {path: 'test', component: TestsocketComponent}
 ];
 
 @NgModule({

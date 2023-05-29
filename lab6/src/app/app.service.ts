@@ -9,6 +9,10 @@ export class AppService {
  public authAdmin = false;
  response : any;
   constructor(private http: HttpClient) {
+        // this.authenticated = Boolean(localStorage.getItem('auth'));
+        // this.authAdmin = Boolean(localStorage.getItem('role'));
+        this.authenticated = localStorage.getItem('auth')==='1'?true:false ;
+        this.authAdmin =     localStorage.getItem('role')==='1'?true:false;
   }
 
   authenticate(credentials: { username: string; password: string; }) {
@@ -19,12 +23,16 @@ export class AppService {
 
             if (this.response['role']) {
               this.authAdmin = true;
+              localStorage.setItem('role', String(1));
           } else {
+            localStorage.setItem('role', String(0));
               this.authAdmin = false;
           }
             if (this.response['auth']) {
+              localStorage.setItem('auth', String(1));
                 this.authenticated = true;
             } else {
+              localStorage.setItem('auth', String(0));
                 this.authenticated = false;
             }
             console.log(this.authenticated + ' '+this.authAdmin);

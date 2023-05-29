@@ -23,7 +23,7 @@ export class WashService {
   }
   public save(wash : Wash) {
 
-    return this.http.post<Wash>(this.URL,wash).subscribe();
+    return this.http.post<Wash>(this.URL,wash);
 
   }
   public update(wash : Wash){

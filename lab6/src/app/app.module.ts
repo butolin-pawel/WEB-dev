@@ -15,6 +15,7 @@ import { BoxUpdComponent } from './box-upd/box-upd.component';
 import { WashUpdComponent } from './wash-upd/wash-upd.component';
 import { WashCarComponent } from './wash-car/wash-car.component';
 import { WashListComponent } from './wash-list/wash-list.component';
+import { TestsocketComponent } from './testsocket/testsocket.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { WashListComponent } from './wash-list/wash-list.component';
     BoxUpdComponent,
     WashUpdComponent,
     WashCarComponent,
-    WashListComponent
+    WashListComponent,
+    TestsocketComponent
   ],
   imports: [
     BrowserModule,
